@@ -1,0 +1,138 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #0073e6;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.about, .details {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.about:hover, .details:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about h2, .details h2 {
+    margin-bottom: 15px;
+    color: #0073e6;
+}
+
+.details {
+    text-align: left;
+}
+
+.details h2 {
+    text-align: center;
+}
+
+.portfolio {
+    margin-top: 25px;
+}
+
+.portfolio a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #0073e6;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio a:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.socials {
+    margin-top: 30px;
+}
+
+.icon {
+    width: 40px;
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* Для невеликих екранів */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .portfolio a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .icon {
+        width: 30px;
+        margin: 0 10px;
+    }
+}
